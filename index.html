@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,40 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>    
+
+<body>
+
+    <section class="title">
+        <h1>REGRA DE TRÊS SIMPLES</h1>
+    </section>
+
+    <section class="calc">
+        <div class="inputs">
+            
+            <div>
+                <input type="number" name="n1" id="n1">
+                <span>Está para</span>
+                <input type="number" name="n2" id="n2">
+            </div>
+
+            <span>Assim como</span>
+
+            <div>
+                <input type="number" name="n3" id="n3">
+                <span>Está para</span>
+                <input type="number" name="n4" id="n4" disabled placeholder="X">
+            </div>
+            
+        </div>
+
+        <button type="submit">CALCULAR</button>
+    </section>
+
+    <section class="result">
+        <h1>RESULTADO</h1>
+    </section>
 
     <script src="./script.js"></script>
 </body>
+
 </html>
