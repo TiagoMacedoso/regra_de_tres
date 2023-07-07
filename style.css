@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --black: #191919;
+    --gray-1: #404040;
+    --gray-2: #808080;
+    --gray-3: #BFBFBF;
+    --gray-4: #D9D9D9;
+    --white: #E3E3E3;
+}
+
+*{
+    font-family: 'Inter', Arial, sans-serif;
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: var(--white);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, var(--gray-1) 0%, var(--white) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    background-color: var(--gray-2);
+    border-radius: 1.25rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:first-child h1{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.section-inputs{
+    height: 40%;
+    justify-content: space-between;
+}
+.inputs{
+    height: 75%;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputs div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.like-this{
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 0.8rem 0rem;
+}
+
+.inputs div span{
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.inputs div input{
+    width: 33%;
+    height: 2.5rem;
+    background-color: var(--gray-4);
+    border: none;
+    border-radius: 0.7rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.inputs div input:focus{
+    outline: none;
+    background-color: #BFBFBFAA;
+}
+
+.inputs div input:disabled{
+    background-color: var(--gray-3);
+}
+
+.inputs div input:disabled::placeholder{
+    width: 100%;
+}
+
+.section-inputs button{
+    width: 100%;
+    border: none;
+    border-radius: 0.9rem;
+    padding: 1.1rem 0rem;
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+.section-inputs button span{
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-image: linear-gradient(45deg, var(--white), var(--gray-2));
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 400% 100%;
+    animation: effect-gradient 3s infinite linear alternate;
+    color: transparent;
+}
+
+.section-inputs button:focus{
+    outline: none;
+    border: none;
+}
+
+dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    outline: none;
+    box-shadow: 5px 5px 3px var(--black);
+    border-radius: .5rem;
+    background-color: var(--white);
+    border: none;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.title_modal{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: .3rem .8rem;
+    background-color: var(--gray-4);
+}
+
+.title_modal h1{
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.title_modal img{
+    width: 1.5rem;
+}
+
+.media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.media a{
+    padding: 0;
+    margin: 0;
+    width: 1.8rem;
+    display: flex;
+}
+
+.media a img{
+    width: 100%;
+}
+
+@keyframes effect-gradient {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}

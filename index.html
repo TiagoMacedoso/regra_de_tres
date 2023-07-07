@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000">
     <title>Calculadora de regra de três</title>
 
     <link rel="stylesheet" href="./style.css">
@@ -13,35 +14,53 @@
 
 <body>
 
-    <section class="title">
-        <h1>REGRA DE TRÊS SIMPLES</h1>
-    </section>
+    <main>
 
-    <section class="calc">
-        <div class="inputs">
-            
-            <div>
-                <input type="number" name="n1" id="n1">
-                <span>Está para</span>
-                <input type="number" name="n2" id="n2">
+        <section>
+            <h1>REGRA DE TRÊS SIMPLES</h1>
+        </section>
+
+        <section class="section-inputs">
+            <div class="inputs">
+
+                <div>
+                    <input type="number" name="n1" id="n1">
+                    <span>Está para</span>
+                    <input type="number" name="n2" id="n2">
+                </div>
+
+                <span class="like-this">Assim como</span>
+
+                <div>
+                    <input type="number" name="n3" id="n3">
+                    <span>Está para</span>
+                    <input type="number" name="n4" id="n4" disabled placeholder="X">
+                </div>
+
             </div>
 
-            <span>Assim como</span>
+            <button type="submit" id="btn_calc"><span>CALCULAR</span></button>
 
-            <div>
-                <input type="number" name="n3" id="n3">
-                <span>Está para</span>
-                <input type="number" name="n4" id="n4" disabled placeholder="X">
-            </div>
+        </section>
+
+        <section class="media">
+            <a href="https://github.com/tiagomacedoso/"><img src="./assets/github.svg" alt="Ícone com link para o GitHub do criador da página"></a>
+            <a href="https://www.linkedin.com/in/tiagomacedoso/"><img src="./assets/linkedin.svg" alt="Ícone com link para o LinkedIn` do criador da página"></a>
+            <a href="https://github.com/TiagoMacedoso/regra_de_tres/"><img src="./assets/code.svg" alt="Ícone com link para o repositório de códigos utilizados para criar a página"></a>
+
+        </section>
+
+    </main>
+
+    <dialog>
+        <div class="title_modal">
+            <h1>RESULTADO</h1>
+            <img src="/assets/close.svg" id="close_modal" alt="Ícone para fechar o modal de resultado">
+        </div>
+        <div class="body_modal">
             
         </div>
-
-        <button type="submit">CALCULAR</button>
-    </section>
-
-    <section class="result">
-        <h1>RESULTADO</h1>
-    </section>
+    </dialog>
 
     <script src="./script.js"></script>
 </body>
