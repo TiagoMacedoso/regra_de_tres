@@ -7,9 +7,9 @@ const n1 = document.querySelector("#n1")
 const n2 = document.querySelector("#n2")
 const n3 = document.querySelector("#n3")
 
-let valor1 = 0
-let valor2 = 0
-let valor3 = 0
+let value1 = 0
+let value2 = 0
+let value3 = 0
 
 document.addEventListener("keypress", function(e) {
     if(e.key === "Enter") btn_calc.click()
@@ -26,14 +26,14 @@ btn_calc.onclick = () => {
 }
 
 function validar(){
-    valor1 = n1.value
-    valor2 = n2.value
-    valor3 = n3.value
+    value1 = n1.value
+    value2 = n2.value
+    value3 = n3.value
 
-    if (valor1 == "" || valor1 == null || valor1 == undefined) error_input("1")
-    else if(valor2 == "" || valor2 == null || valor2 == undefined) error_input("2")
-    else if(valor3 == "" || valor3 == null || valor3 == undefined) error_input("3")
-    else if(valor1 == 0 || valor2 == 0 || valor3 == 0) {
+    if (value1 == "" || value1 == null || value1 == undefined) error_input("1")
+    else if(value2 == "" || value2 == null || value2 == undefined) error_input("2")
+    else if(value3 == "" || value3 == null || value3 == undefined) error_input("3")
+    else if(value1 == 0 || value2 == 0 || value3 == 0) {
         body_modal.innerHTML = `
         <div class="error">
             <h1>A divisão por 0 é impossível!</h1>
@@ -46,19 +46,19 @@ function validar(){
 }
 
 function calcular(){
-    let multiplicacao = valor2 * valor3
-    let resultado = multiplicacao / valor1
+    let mult = value2 * value3
+    let result = mult / value1
 
     body_modal.innerHTML = `
     <div class="process">
-        <p>${valor1}.x = ${valor3}.${valor2}</p>
-        <p>${valor1}.x = ${multiplicacao}</p>
-        <p>x = ${multiplicacao}/${valor1}</p>
-        <p>x = ${resultado}</p>
+        <p>${value1}.x = ${value3}.${value2}</p>
+        <p>${value1}.x = ${mult}</p>
+        <p>x = ${mult}/${value1}</p>
+        <p>x = ${result}</p>
     </div>
 
     <div class="result">
-        <h1>O valor final de X é: ${resultado}</h1>
+        <h1>O valor final de X é: ${result}</h1>
     </div>
     `
 }
