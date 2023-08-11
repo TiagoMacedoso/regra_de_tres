@@ -324,6 +324,31 @@ dialog::backdrop{
     .media a{
         width: 2.5rem;
     }
+
+    .body_modal .process{
+        width: 80%;
+    }
+
+    .body_modal .process p{
+        font-size: x-large;
+    }
+
+    .body_modal .result{
+        width: 80%;
+    }
+    
+    .body_modal .result h1{
+        width: 100%;
+        font-size: xx-large;
+    }
+
+    .body_modal .error h1{
+        font-size: xx-large;
+    }
+
+    .body_modal .error p{
+        font-size: large;
+    }
 }
 
 @keyframes effect-gradient {
