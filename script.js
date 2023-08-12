@@ -12,7 +12,7 @@ let value2 = 0
 let value3 = 0
 
 document.addEventListener("keypress", function(e) {
-    if(e.key === "Enter") btn_calc.click()
+    e.key === "Enter" ? btn_calc.click() : await
 })
 
 btn_close_modal.onclick = () => {
@@ -30,11 +30,11 @@ function validar(){
     value2 = n2.value
     value3 = n3.value
 
-    if (value1 == "" || value1 == null || value1 == undefined) error_input(1)
-    else if(value2 == "" || value2 == null || value2 == undefined) error_input(2)
-    else if(value3 == "" || value3 == null || value3 == undefined) error_input(3)
-    else if(value1 == 0 || value2 == 0 || value3 == 0) error_input(0)
-    else calcular()
+    value1 == "" || value1 == null || value1 == undefined ? error_input(1)
+    : value2 == "" || value2 == null || value2 == undefined ? error_input(2)
+    : value3 == "" || value3 == null || value3 == undefined ? error_input(3)
+    : value1 == 0 || value2 == 0 || value3 == 0 ? error_input(0)
+    : calcular()
 }
 
 function calcular(){
