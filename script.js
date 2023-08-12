@@ -30,18 +30,10 @@ function validar(){
     value2 = n2.value
     value3 = n3.value
 
-    if (value1 == "" || value1 == null || value1 == undefined) error_input("1")
-    else if(value2 == "" || value2 == null || value2 == undefined) error_input("2")
-    else if(value3 == "" || value3 == null || value3 == undefined) error_input("3")
-    else if(value1 == 0 || value2 == 0 || value3 == 0) {
-        body_modal.innerHTML = `
-        <div class="error">
-            <h1>A divisão por 0 é impossível!</h1>
-
-            <p>Por tanto, não informe valores com 0.</p>
-        </div>
-        `
-    }
+    if (value1 == "" || value1 == null || value1 == undefined) error_input(1)
+    else if(value2 == "" || value2 == null || value2 == undefined) error_input(2)
+    else if(value3 == "" || value3 == null || value3 == undefined) error_input(3)
+    else if(value1 == 0 || value2 == 0 || value3 == 0) error_input(0)
     else calcular()
 }
 
@@ -64,11 +56,17 @@ function calcular(){
 }
 
 function error_input(var_error){
-    body_modal.innerHTML = `
+    var_error != 0 ? body_modal.innerHTML = `
     <div class="error">
         <h1>Ocorreu um erro no valor da variável ${var_error}.</h1>
 
         <p>Por gentileza informe todos os valor antes de tentar calcular!</p>
+    </div>
+    ` : body_modal.innerHTML = `
+    <div class="error">
+        <h1>A divisão por 0 é impossível!</h1>
+
+        <p>Por tanto, não informe valores com 0.</p>
     </div>
     `
 }
